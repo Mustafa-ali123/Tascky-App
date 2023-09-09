@@ -1,25 +1,24 @@
 import React from 'react'
-import Camera from './Camera'
+import Taskbar from './Taskbar'
 import PresonProfile from './PresonProfile'
 import Icon from "react-native-vector-icons/MaterialIcons"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Add from './Add'
+import {useState} from 'react'
 import Message from './Message'
 import Folder from './Folder'
+import Add from './Add'
 
 
 export default function Tab() {
   const Bottom = createBottomTabNavigator()
-  
-  return (
-    <Bottom.Navigator tabBarOptions={{
-      showLabel: false
-    }}>
+  let [show ,setshow] =useState(false)
+  return (<>
+    <Bottom.Navigator>
       <Bottom.Screen options={{
         headerShown: false, tabBarIcon: (tabI) => {
           return <Icon name="home" size={40} style={{ color: tabI.focused ? "#9E9EFF" : "gray" }} />
         }
-      }} name='Camera' component={Camera} />
+      }} name='Taskar' component={Taskbar} />
 
       <Bottom.Screen options={{
         headerShown: false, tabBarIcon: (tabI) => {
@@ -44,7 +43,11 @@ export default function Tab() {
           return <Icon name="account-circle" size={40} style={{ color: tabI.focused ? "#9E9EFF" : "gray" }} />
         }
       }} name='Profile' component={PresonProfile} />
-
     </Bottom.Navigator>
+    {
+      show??<Add/>
+    }
+    
+    </>
   )
 }

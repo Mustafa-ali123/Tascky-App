@@ -6,15 +6,16 @@ import img1 from '../images/img1.jpeg'
 import img2 from '../images/img2.jpeg'
 import img3 from '../images/img3.jpeg'
 import img4 from '../images/img4.jpeg'
-const Team = () => {
+const Team = ({navigation}) => {
   let [images, setimages] = useState([img2,img1,img3,img4])
 
   return (
     <ScrollView>
+      <View style={{backgroundColor:"white"}}>
     <View style={{backgroundColor:"white",marginHorizontal:20}}>
-      <Header title="Create Team" />
+      <Header navigating={navigation} title="Create Team" />
       <View style={{ alignItems: "center", }}>
-      <Image style={{width:100,height:100,marginTop:30,borderRadius:70}} source={img1} />
+      <Image style={{width:100,height:100,marginTop:10,borderRadius:70}} source={img1} />
       <Text style={styles.head}>Upload Logo file</Text>
       <Text style={styles.txt}>You logo publish always</Text>
       </View>
@@ -37,6 +38,7 @@ const Team = () => {
     <TouchableOpacity style={{ alignItems: "center", marginVertical:5 }} onPress>
           <Text style={styles.btn} >Save</Text>
         </TouchableOpacity>
+    </View>
     </View>
     </ScrollView>
   )
@@ -69,14 +71,14 @@ let styles = StyleSheet.create({
       marginTop: 10,
       marginBottom: 10,
       color: 'gray',
-      fontSize: 16,
+      fontSize: 18,
       marginLeft:20,  
       borderColor:"black"
     },
     inp: {
       width: 345,
       borderWidth: 1,
-      fontSize: 18,
+      fontSize: 16,
       borderRadius: 8,
       color: "black",
       textAlign:"center",

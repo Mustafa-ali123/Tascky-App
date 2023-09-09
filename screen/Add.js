@@ -4,14 +4,14 @@ import React from 'react'
 const Add = ({ navigation }) => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: "center" }}>
-      <TouchableOpacity>
-        <Text style={styles.txt} onPress={() => navigation.navigate('Task')}>Create Task</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Task')}>
+        <Text style={styles.txt} >Create Task</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Project')}>
         <Text style={styles.txt}>Create Project</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={styles.txt} onPress={() => navigation.navigate('Team')}>Create Team</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Team')}>
+        <Text style={styles.txt} >Create Team</Text>
       </TouchableOpacity>
       <TouchableOpacity>
         <Text style={styles.txt}>Create Event</Text>

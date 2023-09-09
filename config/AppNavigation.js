@@ -13,6 +13,7 @@ import Admin from '../screen/Admin';
 import Tab from '../screen/Tab';
 import Task from '../screen/Task';
 import Team from '../screen/Team';
+import Project from '../screen/Project';
 
 export default function AppNavigation({ navigation }) {
   const Stack = createNativeStackNavigator()
@@ -28,6 +29,7 @@ export default function AppNavigation({ navigation }) {
         <Stack.Screen options={{ headerShown: false }} name="Tab" component={Tab} />
         <Stack.Screen options={{ headerShown: false }} name="Task" component={Task} />
         <Stack.Screen options={{ headerShown: false }} name="Team" component={Team} />
+        <Stack.Screen options={{ headerShown: false }} name="Project" component={Project} />
         {/* <Stack.Screen  name="Profile" component={Profile} /> */}
         {/* <Stack.Screen name="Product" component={Product} />
          <Stack.Screen name="Map" component={Map} />

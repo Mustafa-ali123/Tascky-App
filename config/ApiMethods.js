@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 let apiHandling = axios.create({
-        baseURL: "https://dark-red-foal-wrap.cyclic.app/api"
+        baseURL: "https://modern-dungarees-dog.cyclic.cloud/api"
     })
 const Get = (endPoint) => {
     return apiHandling.get(endPoint)

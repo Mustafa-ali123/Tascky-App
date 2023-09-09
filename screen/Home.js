@@ -96,7 +96,7 @@ export default function SwiperComponent({navigation}) {
       <Image style={{ height: 350 }} source={img4} />
         <View style={{width:300}}>
           <Text style={{ fontSize: 20,marginTop:20, color: "#9E9EFF" }}> Task Manegement</Text>
-          <Text style={{ fontSize: 35, color: "black", fontWeight: "bold" }}>Manage ypur </Text>
+          <Text style={{ fontSize: 35, color: "black", fontWeight: "bold" }}>Manage your </Text>
           <Text style={{ fontSize: 35, color: "#9E9EFF", fontWeight: "bold", fontWeight: "bold" }}>Tasks quickly for  </Text>
           <Text style={{ fontSize: 35, color: "black", fontWeight: "bold", fontWeight: "bold" }}>Result</Text>         
           <TouchableOpacity onPress={()=>navigation.navigate("Tab")}>          
